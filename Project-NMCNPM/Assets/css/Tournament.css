@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* -------------------------menu ------------------------ */
+.menu-container{
+    width:100%;
+
+}
+
+.home-menu {
+    display: flex;
+    padding: 5px;
+    background-color: rgba(17,53,139,0.77);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 0px 45px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+.home-menu-logo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: #FFFCFC;
+    font-weight: 500;
+}
+.home-menu-logo img{
+    position: relative;
+    top: 3px;
+    width: 24%;
+}
+
+.home-menu-btn{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    margin-left: 350px;
+}
+
+.home-menu-btn li{
+    display: inline-block;
+    
+}
+
+.home-menu-btn li a{
+    color: #FFFCFC;
+    text-decoration: none;
+    display:  block ;
+    padding: 15px;
+    border-radius: 25px;
+
+}
+
+
+.home-menu-btn li a:hover{
+    background-color: #F29036;
+    color: #050505;
+}
+
+.home-menu-register{
+    display: flex;
+    width: 320px;
+    justify-content: space-around;
+    margin-right: 30px;
+    align-items: center;
+    color: #fff;
+}
+
+.home-menu-register .far {
+    font-size: 18px;
+    color: #fff;
+}
+
+.home-menu-register .avatar-name{
+    display: flex;
+    align-items: center;
+}
+
+.home-menu-register .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.home-menu-register .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.home-menu-register .pop-up-menu{
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    background-color: #e2e4e9;
+    text-align: center;
+    line-height: 30px;
+    color: #050505;
+    font-size: 19px;
+    cursor: pointer;
+    position: relative;
+}
+
+.pop-up-submenu{
+    width: 300px;
+    position: absolute;
+    right: 25%;
+    top: 130%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #272626;
+    display: none;
+}
+
+.pop-up-submenu.active{
+    display: block;
+}
+
+.pop-up-submenu ul{
+    list-style: none;
+    text-align: left;
+}
+
+.pop-up-submenu ul li{
+    padding: 10px 0;
+}
+
+.pop-up-submenu .fas{
+   margin-right: 10px;
+}
+
+.pop-up-submenu span{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media only screen and (min-width : 1200px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+body {
+    background-color: #AEB9D9;
+}
+
+.head-title {
+    margin: 3vw;
+    background-color: rgba(255, 166, 0, 0.597);
+    border-radius: 10px;
+    padding: 10px 5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.list {
+    margin: 0 2vw;
+}
+
+
+.card-profile {
+    width:360px;
+    margin: 0 0.3vw 30px 0.3vw;
+    background-color: #e6e5e1;
+    border-radius: 1vw;
+    border: 0;
+    box-shadow: 1em 1em 2em rgba(0, 0, 0, .2);
+}
+
+.card-profile .card-img-top {
+    border-radius: 1vw 1vw 0 0;
+}
+
+.card-profile .card-img-profile {
+   margin-top:-5vw;
+   width:155px;
+   height:155px;
+   border-radius:50%;
+   margin-left:auto;
+   margin-right:auto;
+   overflow:hidden
+}
+
+.card-img-profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card-profile .card-title {
+    margin-bottom: 10px;
+    color: #3b5999;
+}
+
+.card-profile .card-title small {
+    display: block;
+    font-size: 0.6em;
+    margin-top: 0.2em;
+}
+
+.card-profile .card-links {
+    margin-bottom: 25px;
+}
+
+.card-profile .card-links .fa {
+    margin: 0 1em;
+    font-size: 1.6em;
+}
+
+.card-profile .card-links .fa:focus, .card-profile .card-links .fa:hover {
+    text-decoration: none;
+}
+
+.card-profile .card-links .fa.fa-dribbble {
+    color: #ea4b89;
+    font-weight: bold;
+}
+
+.card-profile .card-links .fa.fa-dribbble:hover {
+    color: #e51d6b;
+}
+
+.card-profile .card-links .fa.fa-twitter {
+    color: #68aade;
+}
+
+.card-profile .card-links .fa.fa-twitter:hover {
+    color: #3e92d5;
+}
+
+.card-profile .card-links .fa.fa-facebook {
+    color: #3b5999;
+}
+
+.card-profile .card-links .fa.fa-facebook:hover {
+    color: #2d4474;
+}
+
+
+
+

@@ -1,0 +1,12 @@
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\DB_QLGD1.dll.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\DB_QLGD1.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\DB_QLGD1.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\EntityFramework.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\EntityFramework.SqlServer.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\EntityFramework.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\bin\Debug\EntityFramework.SqlServer.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\obj\Debug\DB_QLGD1.csproj.AssemblyReference.cache
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\obj\Debug\DB_QLGD1.csproj.CoreCompileInputs.cache
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\obj\Debug\DB_QLGD1.csproj.CopyComplete
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\obj\Debug\DB_QLGD1.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DB_QLGD1\obj\Debug\DB_QLGD1.pdb

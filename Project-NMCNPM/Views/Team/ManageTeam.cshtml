@@ -1,0 +1,121 @@
+﻿@model List<DB_QLGD1.DOIBONG>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ManageTeam</title>
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/plugin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/Tournament.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="menu-container" style="padding: 0;">
+
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <img src="~/Assets/img/pngwing 1.png" />
+                <h1 style="font-size: 32px; font-weight:bold">My Champion</h1>
+            </div>
+            <ul class="home-menu-btn" style="margin-bottom:0">
+                <li><a href="@Url.Action("IndexUser","Home",new {id = Session["user"] })">Trang chủ</a></li>
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+            <div class="home-menu-register">
+                <div class="infors"><i class="far fa-bell"></i></div>
+                <div class="mail"><i class="far fa-envelope"></i></div>
+                <div class="avatar-name">
+                    <div class="avatar">
+                        <img src="@Url.Content(ViewBag.User.ANHDAIDIEN)" alt="">
+                    </div>
+                    <p style="margin-bottom:0">@ViewBag.User.TENND</p>
+                </div>
+                <div class="pop-up-menu">
+                    <i class="fas fa-caret-down"></i>
+
+                    <div class="pop-up-submenu">
+                        <ul>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-user"></i> <span>Hồ sơ cá nhân</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTeam","Team",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-users"></i> <span>Quản lí đội bóng</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTournament","Tournament",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-futbol"></i><span>Quản lí giải đấu</span></a> </li>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="img-fluid" src="~/Assets/img/145.png" />
+    </div>
+
+
+    <div class="container">
+        <div class="row head-title">
+            <div class="col-1.5">
+                Sắp xếp theo
+            </div>
+            <div class="col-2">
+                <select class="custom-select" id="sortby">
+                    <option selected value="Tên">Tên</option>
+                    <option value="Ngày tạo đội">Ngày tạo đội</option>
+                    <option value="Số trận đã tham gia">Số trận đã tham gia</option>
+                </select>
+            </div>
+
+
+        </div>
+        <div class="row list">
+
+            @foreach (var item in Model)
+            {
+            <div class="col" style="flex-grow:0">
+                <div class="card card-profile text-center">
+                    <img class="card-img-top" src="~/Assets/img/wp.jpg" />
+                    <div class="card-block">
+                        <div class="card-img-profile">
+                            <img src="@Url.Content(item.ANHDAIDIEN)" />
+                        </div>
+                        <h4 class="card-title">
+                            @item.TENDB
+                            <small>Đội bóng chuyên nghiệp</small>
+                        </h4>
+                        <h6>Số lượng thành viên: @item.SOLUONGTV</h6>
+                        <h6>Số trận đấu đã tham dự</h6>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row" style="padding: 0;">
+                            <div class="col-5" style="padding: 0;">
+                                <button type="button" class="btn btn-danger btn-block"
+                                        style="border-radius: 0 0 0vw 1vw; padding: 10px 0;">
+                                    GIẢI TÁN
+                                </button>
+                            </div>
+                            <div class="col-7" style="padding: 0;">
+                                <a href="@Url.Action("Detail", new { id = item.MADB.Trim()})" class="btn btn-primary btn-block" role="button"
+                                   style="border-radius: 0 0 1vw 0vw; padding: 10px 0;" aria-pressed="true">CHỈNH SỬA</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+    <script>
+    var pop_upBtn = document.querySelector(".pop-up-menu");
+    var pop_up = document.querySelector(".pop-up-submenu");
+    pop_upBtn.onclick = function () {
+    pop_up.classList.toggle("active");
+    }
+    </script>
+</body>
+</html>

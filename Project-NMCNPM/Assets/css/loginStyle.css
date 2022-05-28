@@ -1,0 +1,392 @@
+body{
+    background-color: rgba(50, 104, 50);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-bottom: 36px;
+}
+
+#all {
+    width: 100%;
+    margin-top: 90px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#content{
+    min-width: 800px;
+    /* margin-top: 90px; */
+    background-color: #A3D297;
+    /* margin-left: calc((100% - 800px)/2);
+    margin-right: calc((100% - 800px)/2); */
+    border-radius: 12px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1200px){
+    #goal1 .out--line {
+        display: none;
+    }
+    #goal1 .in--line {
+        display: none;
+    }
+    #goal1 .circle {
+        display: none;
+    }
+
+    #goal2 .out--line {
+        display: none;
+    }
+    #goal2 .in--line {
+        display: none;
+    }
+    #goal2 .circle {
+        display: none;
+    }
+}
+
+#goal1 {
+    width: 180px;
+    height: 380px;
+    margin-top: 100px;
+    border: none;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+#goal1 .out--line {
+    width: 150px;
+    height: 376px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(50, 104, 50);
+}
+
+#goal1 .in--line {
+    width: calc(150px * 0.7);
+    height: 270px;
+    border: 2px solid white;
+    position: absolute;
+    z-index: 3;
+    margin-top: calc((376px - 270px)/2);
+}
+
+#goal1 .circle {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 70px;
+    position: absolute;
+    margin-top: calc((376px - 70px)/2);
+    right: 0;
+    z-index: 1;
+}
+
+#goal2 {
+    width: 180px;
+    height: 380px;
+    margin-top: 100px;
+    border: none;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+#goal2 .out--line {
+    width: 150px;
+    height: 376px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(50, 104, 50);
+    right: 0;
+}
+
+#goal2 .in--line {
+    width: calc(150px * 0.7);
+    height: 270px;
+    border: 2px solid white;
+    position: absolute;
+    z-index: 3;
+    margin-top: calc((376px - 270px)/2);
+    right: 0;
+}
+
+#goal2 .circle {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 70px;
+    position: absolute;
+    margin-top: calc((376px - 70px)/2);
+    /* margin-left: calc((180px - 80px)); */
+    z-index: 1;
+    left: 0;
+    
+}
+
+#content .content__heading {
+    width: 100%;
+    font-size: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 24px 0;
+}
+
+#content .content__logo {
+    width: 100%;
+    padding: 0 calc((100% - 161px)/2);
+    box-sizing: border-box;
+}
+
+#content .content__login {
+    width: 469px;
+    margin: 0 calc((100% - 469px) / 2);
+}
+
+#content .login__item {
+    margin: 16px 0;
+}
+
+#content .login--input {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: none;
+    outline:none;
+    font-size: 18px;
+    padding: 15px;
+}
+
+#content .login--label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#content .help {
+    width: 100%;
+    text-align: center;
+}
+
+#content .help a {
+    color: blue;
+}
+
+#content .confirm--btn {
+    background-color: #1F720B;
+    color: white;
+    font-size: 16px;
+    width: 120px;
+    height: 46px;
+    margin: 24px calc((100% - 100px)/2);
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+#content .confirm--btn:hover {
+    background-color: #cccccc;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/*header*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* -------------------------menu ------------------------ */
+.home-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #A3D297;
+    background-position: center;
+    background-size: cover;
+}
+.home-menu{
+    display: flex;
+    padding: 5px;
+    background-color:#368f20;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 0px 45px;
+    position: relative;
+    
+}
+.home-menu-logo {
+    position: absolute;
+}
+
+    .home-menu-logo a {
+        display: flex;
+        align-items: center;
+        color: #FFFCFC;
+        font-weight: 500;
+        text-decoration: none;
+    }
+.home-menu-logo img{
+    position: relative;
+    top: 3px;
+    width:24%;
+}
+
+
+
+.home-menu-search {
+    width: 359px;
+    height: 49px;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #525151;
+    border: none;
+    outline: none;
+    margin-left: 400px;
+
+}
+.home-menu-btn{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 23px;
+margin-left:350px;
+}
+.home-menu-btn li{
+    display: inline-block;
+    
+}
+
+.home-menu-btn li a{
+    color: #FFFCFC;
+    text-decoration: none;
+    display:  block ;
+    padding: 15px;
+    border-radius: 25px;
+    
+}
+
+
+.home-menu-btn li a:hover{
+    background-color: #F29036;
+    color: #050505;
+}
+.home-menu-register .btn-login{
+    display: inline-block;
+    text-decoration:none;
+    background-color: transparent;
+    color: #FFFCFC;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 5px 15px;
+}
+
+.home-menu-register .btn-login:first-child{
+    border-right: 1px solid #FFFCFC;
+}
+
+
+/*---------------*/
+
+:root {
+  --background-color: #212121;
+}
+
+
+
+::before {
+  position: absolute;
+  content: "";
+}
+
+.popup-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background-color);
+    z-index:2;
+    display:none;
+}
+
+.body-loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* reflection of the animation in the bottom */
+.wrapper {
+  -webkit-box-reflect: below 5px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  /*  Just to make it center  */
+   transform: translatey(-25%);
+}
+
+/* main loading circle  */
+.loading {
+  width: 300px;
+  height: 300px;
+  border-radius: 999px;
+  transform: rotate(-45deg);
+  animation: animated-curve 2s ease-in-out infinite;
+}
+
+/*  neon-semicircle */
+.loading::before {
+  bottom: 0;
+  background: #02fcfa;
+  width: 100%;
+  height: 50%;
+  border-radius: 0 0 999px 999px;
+  box-shadow: 0 0 100px -50px #02fcfa;
+}
+
+/* inner-cirle with the ball */
+.inner_circle {
+  position: absolute;
+  inset: 20px;
+  background: var(--background-color);
+  border-radius: 999px;
+  animation: animated-ball 2s ease-in-out infinite;
+}
+
+/* style for the ball */
+.inner_circle::before {
+  inset: 2px;
+  top: 45%;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+}
+
+/* rotating the ball from initial point to -180deg */
+@keyframes animated-ball {
+  50% {
+    transform: rotate(-180deg);
+  }
+}
+
+/* rotating the circle from initial point (-45deg) to 45deg */
+@keyframes animated-curve {
+  50% {
+    transform: rotate(45deg);
+  }
+}

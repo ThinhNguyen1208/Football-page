@@ -1,0 +1,206 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewCreate</title>
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/css/newCreatestyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="home-menu">
+            <div class="home-menu-logo">        
+                <a href="@Url.Action("Index","Home",null)">
+                    <img src="~/Assets/img/pngwing 1.png" />
+                    <h1>My Champion</h1>
+                </a>
+                
+            </div>
+
+            <input class="home-menu-search" type="text" placeholder="Tìm giải đấu, đội bóng,..." style="display:none">
+
+            <ul class="home-menu-btn">
+                <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+
+            <div class="home-menu-register">
+                @Html.ActionLink("Đăng nhập", "Login", "Register", null, new { @class = "btn-login" })
+                @Html.ActionLink("Đăng ký", "NewCreate", "Register", null, new { @class = "btn-login" })
+            </div>
+        </div>
+
+        <!-- main -->
+        <div id="all">
+            <div id="goal1">
+                <div class="out--line"></div>
+                <div class="in--line"></div>
+                <div class="circle"></div>
+            </div>
+
+            <div id="content">
+                <div class="content__heading">
+                    Đăng ký
+                </div>
+
+                <div class="content__logo">
+                    <img src="~/Assets/img/logo.png" />
+                </div>
+
+                <div class="avatar--line">
+                    <div class="content__avatar">
+                        <div id="img-preview"></div>
+                        <input type="file" id="choose-file" name="choose-file" accept="image/*" />
+                        <label for="choose-file"><i class="fas fa-camera" style="font-size:30px"></i></label>
+                    </div>
+                    <div class="content__line"></div>
+                </div>
+
+                <div class="content__information">
+                    <div class="input--tag">
+                        <label for="" class="input--name">Họ và tên</label>
+                        <input type="text" class="input--enter"  id="name">
+                    </div>
+
+                    <div class="input--tag">
+                        <label for="" class="input--name">Tên đăng nhập</label>
+                        <input type="text" class="input--enter" id="userName">
+                    </div>
+
+                    <div class="input--tag">
+                        <label for="" class="input--name">Mật khẩu</label>
+                        <input type="password" class="input--enter" id="password">
+
+                    </div>
+
+                    <div class="input--tag">
+                        <label for="" class="input--name">Xác nhận mật khẩu</label>
+                        <input type="password" class="input--enter" id="confirmPass">
+                        <p class="inform-password" style="font-size:20px;color:red;text-align:center"></p>
+                    </div>
+
+                    <div class="input--tag">
+                        <label for="" class="input--name">Email liên hệ</label>
+                        <input type="email" class="input--enter" id="email">
+                    </div>
+
+                    <div class="input--tag">
+                        <label for="" class="input--name">Số điện thoại</label>
+                        <input type="text" class="input--enter" id="numberPhone">
+                        <p class="inform-numberPhone" style="font-size:20px;color:red;text-align:center"></p>
+                    </div>
+
+                    <div class="input--tag">
+                        <label for="" class="input--name">Ngày sinh</label>
+                        <input type="date" class="input--enter" id="birthday">
+                    </div>
+
+                    <p class="inform" style="font-size:20px;color:red;text-align:center"></p>
+                    <button class="input--btn" onclick="CreateAccount()">Đăng ký</button>
+                </div>
+            </div>
+
+            <div id="goal2">
+                <div class="out--line"></div>
+                <div class="in--line"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chooseFile = document.getElementById("choose-file");
+        const imgPreview = document.getElementById("img-preview");
+        const image = "";
+        chooseFile.addEventListener("change", function () {
+            getImgData();
+            function getImgData() {
+                const files = chooseFile.files[0];
+                console.log(files);
+                if (files) {
+                    const fileReader = new FileReader();
+                    fileReader.readAsDataURL(files);
+                    console.log(fileReader);
+                    fileReader.addEventListener("load", function () {
+                        imgPreview.style.display = "block";
+                        imgPreview.innerHTML = '<img src="' + this.result + '" />';
+                    });
+                }
+            }
+        });
+
+        
+
+        function CreateAccount() {
+            var name = document.querySelector("#name").value;
+            var username = document.querySelector("#userName").value;
+            var password = document.querySelector("#password").value;
+            var confirmPass = document.querySelector("#confirmPass").value;
+            var email = document.querySelector("#email").value;
+            var numberPhone = document.querySelector("#numberPhone").value;
+            var birthday = document.querySelector("#birthday").value;
+
+            if (validateForm(name, userName, password, confirmPass, email, numberPhone, birthday) != false) {
+                var form = new FormData();
+                form.append("name", name);
+                form.append("username", username);
+                form.append("password", password);
+                form.append("email", email);
+                form.append("numberPhone", numberPhone);
+                form.append("birthday", birthday);
+                form.append("image", chooseFile.files[0]);
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://localhost:44309/Register/AddNew', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var res = xhr.response;
+                        var resJson = JSON.parse(res);
+
+                        if (resJson.Data.status == "OK") {
+                            window.location = `/Home/IndexUser/${username}`;
+                        }
+                        else {
+                            var inform = document.querySelector(".inform");
+                            inform.innerText = "Tài khoản hoặc mật khẩu đã tồn tại!";
+                        }
+                    }
+                }
+                xhr.send(form);
+                
+            }
+        }
+
+
+
+        function validateForm(name, userName, password, confirmPass, email, numberPhone, birthday) {
+            var isValid = true;
+            var inform = document.querySelector(".inform");
+            var inform_pass = document.querySelector(".inform-password")
+            var inform_num = document.querySelector(".inform-numberPhone")
+            if (name == "" || userName == "" || password == "" || confirmPass == "" || email == "" || numberPhone == "" || birthday == "") {
+                inform.innerText = "Vui lòng điền đầy đủ các thông tin ở các trường!";
+                isValid = false;
+            }
+            if (password != confirmPass) {
+                inform_pass.innerText = "Mật khẩu xác nhận không chính xác";
+                isValid = false;
+            }
+            var pattern = /^0[873]\d{8}$/
+            if (pattern.test(numberPhone) == false) {
+                inform_num.innerText = "Số điện thoại không hợp lệ. Vui lòng nhập lại";
+                isValid = false;
+            }
+            return isValid
+        }
+    </script>
+</body>
+</html>

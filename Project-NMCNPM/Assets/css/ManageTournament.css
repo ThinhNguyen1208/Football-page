@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    background-color: #E3E3E3;
+}
+
+.file {
+    visibility: hidden;
+    position: absolute;
+  }
+
+.nav-item a:hover{
+    color: orangered;
+}
+
+section {
+    padding: 10px 0;
+    margin-top:50px;
+}
+
+
+#tabs{
+	background: #003f98;
+    color: #eee;
+}
+
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #eee;
+    font-size: 20px;
+}
+
+
+.card-profile {
+    width: 100%;
+    margin: 50px auto;
+    background-color: #e6e5e1;
+    border-radius: 0;
+    border: 0;
+}
+.card-profile .card-img-top {
+    border-radius: 0;
+}
+.card-profile .card-img-profile {
+    max-width: 20%;
+    border-radius: 50%;
+    margin-top: -95px;
+    margin-bottom: 15px;
+    border: 5px solid #e6e5e1;
+}
+
+.card-profile .card-title small {
+    display: block;
+    font-size: 0.6em;
+    margin-top: 0.2em;
+}
+
+/*----------------*/
+.pop-up-infor {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 100px;
+    right: -320px;
+    box-shadow: 0 0 15px #000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    animation: move 1s ease-in forwards;
+    z-index: 100;
+    display: none;
+}
+
+    .pop-up-infor.active {
+        display: flex;
+    }
+
+@keyframes move {
+    from {
+        right: -320px;
+    }
+
+    to {
+        right: 20px;
+    }
+}

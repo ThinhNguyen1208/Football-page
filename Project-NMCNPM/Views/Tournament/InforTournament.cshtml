@@ -1,0 +1,412 @@
+﻿    @model DB_QLGD1.GIAIDAU
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InforTournament</title>
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/css/InforTournament.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        .btn-login {
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            color: #FFFCFC;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 5px 15px;
+        }
+
+            .btn-login:first-child {
+                border-right: 1px solid #FFFCFC;
+            }
+
+        .btn-signup {
+            padding: 10px 25px;
+            font-size:28px ;
+            font-weight: 500;
+            border:none;
+            outline:none; 
+            color: #fff; 
+            background: #CB2525;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn-signupTournament {
+            padding: 10px 25px;
+            font-size: 28px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #CB2525;
+            border-radius: 10px;
+            cursor: pointer;
+            display: none;
+            margin:0 auto;
+        }
+        .btn-signup.active{
+            display:block;
+        }
+        .btn-cancel {
+            padding: 10px 25px;
+            font-size: 28px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #CB2525;
+            border-radius: 10px;
+            cursor: pointer;
+            display:none;
+            margin:0 auto;
+        }
+
+        .btn-cancel.active{
+            display:block;
+        }
+        #clockdiv {
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+
+            #clockdiv > div {
+                padding: 10px;
+                border-radius: 3px;
+                background: #00BF96;
+                display: inline-block;
+            }
+
+            #clockdiv div > span {
+                padding: 15px;
+                border-radius: 3px;
+                background: #00816A;
+                display: inline-block;
+            }
+            .active{
+                display:block
+            }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+    @if (Session["user"] != null)
+    {
+
+    <div class="modal">
+        <div class="modal-content" >
+            <h1 class="modal-heading">Chọn đội bóng tham gia giải đấu</h1>
+            <div class="teamList" id="style-15">
+                @foreach (var item in ViewBag.TeamList)
+                {
+                <div class="team-item" idTeam ="@item.MADB.Trim()" idTournament ="@Model.MAGD.Trim()" >
+                    <div class="team-avatar" >
+                        <img src="@Url.Content(item.ANHDAIDIEN)" />
+                    </div>
+                    <p class="team-name">@item.TENDB</p>
+                    <p class="team-name">So luong thanh vien: @item.SOLUONGTV</p>
+                    <button class="btn-join" onclick="joinTournament(event)">Chọn tham gia</button>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+    }
+
+    <div class="menu-container">
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <img src="~/Assets/img/pngwing 1.png" />
+                <h1>My Champion</h1>
+            </div>
+            <ul class="home-menu-btn">
+                @if (Session["user"] != null)
+                {
+                    <li><a href="@Url.Action("IndexUser", "Home", new { id = Session["user"] })">Trang chủ</a></li>
+                }
+                else
+                {
+                    <li><a href="@Url.Action("Index")">Trang chủ</a></li>
+                }
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+            @if (Session["user"] != null)
+            {
+                <div class="home-menu-register">
+                    <div class="infors"><i class="far fa-bell"></i></div>
+                    <div class="mail"><i class="far fa-envelope"></i></div>
+                    <div class="avatar-name">
+                        <div class="avatar">
+                            <img src="@Url.Content(ViewBag.User.ANHDAIDIEN)" alt="">
+                        </div>
+                        <p style="margin-bottom:0">@ViewBag.User.TENND</p>
+                    </div>
+                    <div class="pop-up-menu">
+                        <i class="fas fa-caret-down"></i>
+
+                        <div class="pop-up-submenu">
+                            <ul>
+                                <li> <a href="@Url.Action("Logout", "Register", null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-user"></i> <span>Hồ sơ cá nhân</span></a> </li>
+                                <li> <a href="@Url.Action("ManageTeam", "Team", null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-users"></i> <span>Quản lí đội bóng</span></a> </li>
+                                <li> <a href="@Url.Action("ManageTournament", "Tournament", null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-futbol"></i><span>Quản lí giải đấu</span></a> </li>
+                                <li> <a href="@Url.Action("Logout", "Register", null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div>
+                    @Html.ActionLink("Đăng nhập", "Login", "Register", null, new { @class = "btn-login" })
+                    @Html.ActionLink("Đăng ký", "NewCreate", "Register", null, new { @class = "btn-login" })
+                </div>
+            }
+        </div>
+
+        <div class="content">
+            <div class="navbar-participants">
+                <h1 class="navbar-heading">Các đội tham gia</h1>
+               
+                <div class="participant-list">
+                    @foreach (var item in ViewBag.Participant)
+                    {
+                    <div class="participant-item">
+                        <div class="team-avatar" style="border-radius:50%;overflow:hidden">
+                            <img src="@Url.Content(item.ANHDAIDIEN)" alt="">
+                        </div>
+                        <p class="team-name">@item.TENDB</p>
+                     
+                    </div>
+
+                    }
+
+                </div>
+            </div>
+
+
+
+            <div class="detail-information" style="margin-bottom: 50px">
+                <div class="heading-tournament">
+                    <div class="heading-images">
+                        <div class="heading-bg">
+                            <img src="~/Assets/img/cover.png" />
+                        </div>
+                        <div class="heading-avatar">
+                            <img src="@Url.Content(Model.ANHDAIDIEN)" alt="">
+                        </div>
+                        <h1 class="tournament-name">@Model.TENGD</h1>
+                    </div>
+                </div>
+
+
+                <div class="schedule-infor">
+
+                    <h1 style="font-weight: 400; color: #fff;text-align: center; margin: 10px;">
+                        THỜI GIAN ĐĂNG KÝ CÒN
+                        LẠI
+                    </h1>
+                    <div style="text-align: center; font-weight: 500; ">
+                        <div id="clockdiv">
+                            <div>
+                                <span class="days"></span>
+                                <div class="smalltext">Days</div>
+                            </div>
+                            <div>
+                                <span class="hours"></span>
+                                <div class="smalltext">Hours</div>
+                            </div>
+                            <div>
+                                <span class="minutes"></span>
+                                <div class="smalltext">Minutes</div>
+                            </div>
+                            <div>
+                                <span class="seconds"></span>
+                                <div class="smalltext">Seconds</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="text-align:center; margin-top: 30px;">
+                        @if (Session["user"] == null)
+                        {
+                            <a class="btn-signup" href="@Url.Action("Login", "Register")" style="text-decoration:none">Đăng ký</a>
+                        }
+                        else
+                        {
+
+                            bool isJoined = false;
+                            foreach (var item in ViewBag.Participant)
+                            {
+                                if (item.MAND == ViewBag.User.MAND)
+                                {
+                                    isJoined = true;
+                                    break;
+                                }
+                            }
+                            if (isJoined == false)
+                            {
+                                <button class="btn-signupTournament active" onclick="perform_modal()">Đăng ký</button>
+                                <button class="btn-cancel">Hủy tham gia</button>
+                            }
+                            else
+                            {
+                                <button class="btn-cancel active">Hủy tham gia</button>
+                            }
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="navbar-tournamentinfor">
+                <h1 class="navbar-heading">Thông tin giải đấu</h1>
+                <div class="tournament-infor">
+                    <p>Tên giải đấu: <span class="tournament-name">@Model.TENGD</span></p>
+                    <p>Ngày bắt đầu: <span class="date-start">@Model.TGBATDAU</span></p>
+                    <p>Ngày kết thúc: <span class="date-end">26/12/2021</span></p>
+                    <p>Địa điểm: <span class="site">@Model.MASVD</span></p>
+                    <p>Thể thức: <span class="formala">Chia bảng đấu</span></p>
+                    <p>Số đội tham gia: <span class="amount">@Model.SOLUONGDOITG</span></p>
+                    <p>Số lượng thành viên tối đa: <span class="amount">@Model.SLTVTOIDA</span></p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var modal = document.querySelector(".modal");
+        var btn_sigup = document.querySelector(".btn-signupTournament");
+        var btn_cancel = document.querySelector(".btn-cancel");
+
+        var pop_upBtn = document.querySelector(".pop-up-menu");
+        var pop_up = document.querySelector(".pop-up-submenu");
+        pop_upBtn.onclick = function () {
+            pop_up.classList.toggle("active");
+        }
+
+
+        function perform_modal() {
+
+            modal.classList.add("active");
+
+            modal.onclick = function (e) {
+                if (e.target == modal) {
+                    modal.classList.remove("active")
+                }
+            }
+        }
+
+        function joinTournament(event) {
+            var teamItem = event.target.closest(".team-item");
+
+
+            console.log(teamItem)
+            var TeamId = teamItem.getAttribute("idTeam");
+            var TournamentId = teamItem.getAttribute("idTournament");
+
+
+            var form = new FormData();
+            form.append("TeamId", TeamId);
+            form.append("TournamentId", TournamentId);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'https://localhost:44309/Tournament/JoinTournament', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.response;
+                    var resJson = JSON.parse(res);
+
+                    if (resJson.Data.status == "OK") {
+                        modal.classList.remove("active");
+                        alert("Bạn đã đăng ký thành công");
+                        btn_sigup.classList.remove("active");
+                        btn_cancel.classList.add("active");
+                        var teamList = document.querySelector(".participant-list");
+                        var element = document.createElement("div");
+                        element.classList.add("participant-item");
+                        element.innerHTML = `<div class="team-avatar" style="border-radius:50%;overflow:hidden">
+                            <img src="${resJson.Data.image}" alt="">
+                        </div>
+                        <p class="team-name">${resJson.Data.teamName}</p>`
+                        teamList.appendChild(element)
+
+                    }
+                    else {
+                        alert("Giải đấu đã đủ số lượng thành viên. Rất tiếc với bạn!")
+                    }
+                }
+            }
+            xhr.send(form);
+
+        }
+    </script>
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector('.days');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
+    </script>
+</body>
+</html>

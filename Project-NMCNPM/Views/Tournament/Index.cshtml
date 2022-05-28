@@ -1,0 +1,242 @@
+﻿@model DB_QLGD1.NGUOIDUNG
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Tournament</title>
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/css/createTournament.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="pop-up-infor">
+            <i class="far fa-check-circle" style="color: #82c91e;margin-right: 10px; font-size: 22px;"></i> <span>Bạn đã thêm giải đấu thành công</span>
+        </div>
+
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <img src="~/Assets/img/pngwing 1.png" />
+                <h1>My Champion</h1>
+            </div>
+            <ul class="home-menu-btn">
+                <li><a href="@Url.Action("IndexUser","Home",new {id = Session["user"] })">Trang chủ</a></li>
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+            <div class="home-menu-register">
+                <div class="infors"><i class="far fa-bell"></i></div>
+                <div class="mail"><i class="far fa-envelope"></i></div>
+                <div class="avatar-name">
+                    <div class="avatar">
+                        <img src="@Url.Content(Model.ANHDAIDIEN)" />
+
+                    </div>
+                    <p>@Model.TENND</p>
+                </div>
+                <div class="pop-up-menu">
+                    <i class="fas fa-caret-down"></i>
+
+                    <div class="pop-up-submenu">
+                        <ul>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-user"></i> <span>Hồ sơ cá nhân</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTeam","Team",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-users"></i> <span>Quản lí đội bóng</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTournament","Tournament",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-futbol"></i><span>Quản lí giải đấu</span></a> </li>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-create">
+            <div class="form-create-bg">
+
+                <input type="file" name="background" id="background" accept="image/png, image/jpeg" style="display:none">
+                <button id="changeBg-btn"><i class="fas fa-camera" style="margin-right: 5px;"></i> Đổi ảnh nền</button>
+            </div>
+            <div class="form-create-detail">
+                <h3 class="form-create-detail-title">TẠO GIẢI ĐẤU</h3>
+                <div class="form-create-fields">
+                    <div class="form-create-imgs">
+                        <h1 style="font-size: 24px; margin-bottom:10px;">Chọn ảnh đại diện</h1>
+                        <div class="form-create-img">
+                            <div id="img-preview1" class="img-preview"></div>
+                            <input type="file" id="choose-file1" name="choose-file1" accept="image/*" />
+                            <label for="choose-file1"><i class="fas fa-camera" style="font-size:30px"></i></label>
+                        </div>
+
+                    </div>
+                    <div class="form-create-inputs">
+
+                        <label for="tournamentName">Tên giải:</label> <br>
+                        <input type="text" id="tournamentName"> <br>
+
+                        <label for="time">Thời gian bắt đầu:</label> <br>
+                        <input type="date" id="time"> <br>
+
+                        <label for="address">Sân vận động:</label> <br>
+                        <select id="address">
+                            <option> chọn sân vận động</option>
+                            <option value="SVD001">Sân vận động 1</option>
+                            <option value="SVD002">Sân vận động 2</option>
+                            <option value="SVD003">Sân vận động 3</option>
+                            <option value="SVD004">Sân vận động 4</option>
+                            <option value="SVD005">Sân vận động 5</option>
+                        </select> <br />
+
+
+                        <label for="minAge">Độ tuổi tối thiểu:</label> <br>
+                        <input type="number" id="minAge"> <br>
+
+                        <label for="maxAge">Độ tuổi tối đa:</label> <br>
+                        <input type="number" id="maxAge"> <br>
+
+                        <label for="amountOfTeam">Số đội tham gia:</label> <br>
+                        <select id="amountOfTeam">
+                            <option> chọn số đội tham gia</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                        </select> <br />
+
+                        <label for="amountOfMember">Số lượng thành viên(tối đa) mỗi đội:</label> <br>
+                        <input type="number" id="amountOfMember"> <br>
+
+                        <label for="prize">Giải thưởng:</label> <br>
+                        <input type="text" id="prize"> <br>
+
+                        <p class="inform" style="font-size:20px;color:red;text-align:center"></p>
+                        <button id="submit-form" onclick="CreateTournament()">TẠO GIẢI</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var changeBg_btn = document.querySelector("#changeBg-btn");
+        var background = document.querySelector("#background");
+        changeBg_btn.onclick = function () {
+            background.click();
+        }
+
+        var pop_upBtn = document.querySelector(".pop-up-menu");
+        var pop_up = document.querySelector(".pop-up-submenu");
+        pop_upBtn.onclick = function () {
+            pop_up.classList.toggle("active");
+        }
+
+
+        //add team
+
+        function getImage(chooseFile, imgPreview) {
+            chooseFile.addEventListener("change", function () {
+                getImgData();
+                function getImgData() {
+                    const files = chooseFile.files[0];
+
+                    if (files) {
+                        const fileReader = new FileReader();
+                        fileReader.readAsDataURL(files);
+                        fileReader.addEventListener("load", function () {
+                            imgPreview.style.display = "block";
+                            imgPreview.innerHTML = '<img src="' + this.result + '" />';
+                        });
+                    }
+                }
+            });
+        }
+
+        const chooseFile1 = document.getElementById("choose-file1");
+        const imgPreview1 = document.getElementById("img-preview1");
+        getImage(chooseFile1, imgPreview1);
+
+       
+
+        var inform = document.querySelector(".inform");
+        function CreateTournament() {
+            var tournamentName = document.querySelector("#tournamentName");
+            var time = document.querySelector("#time");
+            var address = document.querySelector("#address");
+            var minAge = document.querySelector("#minAge");
+            var maxAge = document.querySelector("#maxAge");
+            var amountOfTeam = document.querySelector("#amountOfTeam");
+            var amountOfMember = document.querySelector("#amountOfMember");
+            var prize = document.querySelector("#prize");
+
+            if (validateForm(tournamentName.value, time.value, address.value, minAge.value, maxAge.value, amountOfTeam.value, amountOfMember.value, prize.value) != false) {
+                var form = new FormData();
+                form.append("tournamentName", tournamentName.value);
+                form.append("time", time.value);
+                form.append("address", address.value);
+                form.append("minAge", minAge.value);
+                form.append("maxAge", maxAge.value);
+                form.append("amountOfTeam", amountOfTeam.value);
+                form.append("amountOfMember", amountOfMember.value);
+                form.append("prize", prize.value);
+                form.append("avatar", chooseFile1.files[0]);
+
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://localhost:44309/Tournament/AddTournament', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var res = xhr.response;
+                        var resJson = JSON.parse(res);
+
+                        if (resJson.Data.status == "OK") {
+                            tournamentName.value = "";
+                            time.value = "";
+                            address.value = "";
+                            minAge.value = "";
+                            maxAge.value = "";
+                            amountOfTeam.value = "";
+                            amountOfMember.value = "";
+                            prize.value = "";
+
+                            inform.innerText = "";
+
+                            chooseFile1.value = "";
+                            imgPreview1.innerHTML = "<div></div>";
+                          
+
+
+                            var pop_up_infor = document.querySelector(".pop-up-infor")
+                            pop_up_infor.classList.add("active");
+                            setTimeout(function () {
+                                pop_up_infor.classList.remove("active");
+                            }, 3000)
+
+
+                        }
+                        else {
+                            inform.innerText = "Không thể thêm được giải đấu vui lòng xem lại form đã điền!";
+                        }
+                    }
+                }
+                xhr.send(form);
+            }
+        }
+
+
+
+        function validateForm(tournamentName, time, address, minAge, maxAge, amountOfTeam, amountOfMember, prize) {
+            var isValid = true;
+
+            if (tournamentName == "" || time == "" || address == "" || minAge == "" || maxAge == "" || amountOfTeam == "" || amountOfMember == "" || prize == "") {
+                inform.innerText = "Vui lòng điền đầy đủ các thông tin ở các trường!";
+                isValid = false;
+            }
+            return isValid
+        }
+
+    </script>
+</body>
+</html>

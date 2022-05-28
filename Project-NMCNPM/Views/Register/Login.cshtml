@@ -1,0 +1,133 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Assets/css/loginStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="popup-loading">
+        <div class="body-loading">
+            <div class="wrapper">
+                <div class="loading">
+                    <div class="inner_circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div>
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <a href="@Url.Action("Index","Home",null)">
+                    <img src="~/Assets/img/pngwing 1.png" />
+                    <h1>My Champion</h1>
+                </a>
+            </div>
+
+            <input class="home-menu-search" type="text" placeholder="Tìm giải đấu, đội bóng,..." style="display:none">
+
+            <ul class="home-menu-btn">
+                <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+
+            <div class="home-menu-register">
+                @Html.ActionLink("Đăng nhập", "Login", "Register", null, new { @class = "btn-login" })
+                @Html.ActionLink("Đăng ký", "NewCreate", "Register", null, new { @class = "btn-login" })
+            </div>
+        </div>
+        <!-- main -->
+        <div id="all">
+            <div id="goal1">
+                <div class="out--line"></div>
+                <div class="in--line"></div>
+                <div class="circle"></div>
+            </div>
+
+            <div id="content">
+                <div class="content__heading">
+                    Đăng nhập
+                </div>
+
+                <div class="content__logo">
+                    <img src="~/Assets/img/logo.png" />
+                </div>
+
+                <div class="content__login">
+                    <div class="login__item">
+                        <label for="" class="login--label">
+                            Tên đăng nhập
+                        </label>
+                        <input type="text" class="login--input" id="uid">
+                    </div>
+                    <div class="login__item">
+                        <label for="" class="login--label">
+                            Mật khẩu
+                        </label>
+                        <input type="password" class="login--input" id="pass">
+                    </div>
+                </div>
+
+                <div class="help">Chưa có tài khoản, <a href="#">đăng ký</a></div>
+
+                <button class="confirm--btn" onclick="login()">Đăng nhập</button>
+                <p class="inform" style="font-size:20px;color:red;text-align:center"></p>
+            </div>
+
+            <div id="goal2">
+                <div class="out--line"></div>
+                <div class="in--line"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var domain = "@Request.Url.Scheme://@Request.Url.Host";
+        function login() {
+            var uid = document.querySelector("#uid").value;
+            var pass = document.querySelector("#pass").value;
+            var inform = document.querySelector(".inform")
+            var popup = document.querySelector(".popup-loading")
+
+            console.log(uid, pass);
+            if (uid == "" || pass == "") {
+                inform.innerText = "Vui lòng nhập tài khoản và mật khẩu!"
+            }
+            else {
+                var form = new FormData();
+                form.append("username", uid);
+                form.append("password", pass);
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://localhost:44309/Register/CheckLogin', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var res = xhr.response;
+                        var jsonRes = JSON.parse(res);
+                        if (jsonRes.Data.status == "OK") {
+                            window.location = `/Home/IndexUser/${uid}`
+                        }
+                        else {
+                            inform.innerText = "User name hoặc password của bạn đã sai!"
+                        }
+                    }
+                }
+                xhr.send(form);
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,647 @@
+﻿@model DB_QLGD1.GIAIDAU
+@{
+    Layout = null;
+    string[] arrDate = Model.TGBATDAU.ToString().Split(' ');
+    string[] date = arrDate[0].Split('/');
+    string dateFormat = $"{date[2]}-{date[1]}-{date[0]}";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý giải đấu</title>
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/plugin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/ManageTournament.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        /* -------------------------menu ------------------------ */
+        .menu-container {
+            width: 100%;
+        }
+
+        .home-menu {
+            display: flex;
+            padding: 5px;
+            background-color: rgba(17,53,139,0.77);
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0px 0px 0px 45px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .home-menu-logo {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            color: #FFFCFC;
+            font-weight: 500;
+        }
+
+            .home-menu-logo img {
+                position: relative;
+                top: 3px;
+                width: 24%;
+            }
+
+        .home-menu-btn {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            margin-left: 350px;
+        }
+
+            .home-menu-btn li {
+                display: inline-block;
+            }
+
+                .home-menu-btn li a {
+                    color: #FFFCFC;
+                    text-decoration: none;
+                    display: block;
+                    padding: 15px;
+                    border-radius: 25px;
+                }
+
+
+                    .home-menu-btn li a:hover {
+                        background-color: #F29036;
+                        color: #050505;
+                    }
+
+        .home-menu-register {
+            display: flex;
+            width: 320px;
+            justify-content: space-around;
+            margin-right: 30px;
+            align-items: center;
+            color: #fff;
+        }
+
+            .home-menu-register .far {
+                font-size: 18px;
+                color: #fff;
+            }
+
+            .home-menu-register .avatar-name {
+                display: flex;
+                align-items: center;
+            }
+
+            .home-menu-register .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 15px;
+            }
+
+                .home-menu-register .avatar img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+
+            .home-menu-register .pop-up-menu {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #e2e4e9;
+                text-align: center;
+                line-height: 30px;
+                color: #050505;
+                font-size: 19px;
+                cursor: pointer;
+                position: relative;
+            }
+
+        .pop-up-submenu {
+            width: 300px;
+            position: absolute;
+            right: 25%;
+            top: 130%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #272626;
+            display: none;
+        }
+
+            .pop-up-submenu.active {
+                display: block;
+            }
+
+            .pop-up-submenu ul {
+                list-style: none;
+                text-align: left;
+            }
+
+                .pop-up-submenu ul li {
+                    padding: 10px 0;
+                }
+
+            .pop-up-submenu .fas {
+                margin-right: 10px;
+            }
+
+            .pop-up-submenu span {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+        #img-preview {
+            width: 155px;
+            border: 2px dashed #333;
+            margin-bottom: 20px;
+        }
+
+            #img-preview img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+        [type="file"] {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+        }
+
+            [type="file"] + label {
+                font-family: sans-serif;
+                background: #f44336;
+                padding: 10px 30px;
+                border: 2px solid #f44336;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+                [type="file"] + label:hover {
+                    background-color: #fff;
+                    color: #f44336;
+                }
+
+
+        .match-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 10px 0px;
+            color: rgba(0,0,0,0.8);
+            font-size: 20px;
+        }
+
+            .match-item .team-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+                .match-item .team-img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+        .view-detail {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            background: #44c044;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px #ccc;
+        }
+    </style>
+    <div class="pop-up-infor">
+        <i class="far fa-check-circle" style="color: #82c91e;margin-right: 10px; font-size: 22px;"></i> <span>Bạn đã cập nhật giải thành công</span>
+    </div>
+
+    <div class="menu-container" style="padding: 0;">
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <img src="~/Assets/img/pngwing 1.png" />
+                <h1 style="font-size: 32px; font-weight:bold">My Champion</h1>
+            </div>
+            <ul class="home-menu-btn" style="margin-bottom:0">
+                <li><a href="@Url.Action("IndexUser","Home",new {id = Session["user"] })">Trang chủ</a></li>
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+            <div class="home-menu-register">
+                <div class="infors"><i class="far fa-bell"></i></div>
+                <div class="mail"><i class="far fa-envelope"></i></div>
+                <div class="avatar-name">
+                    <div class="avatar">
+                        <img src="@Url.Content(ViewBag.User.ANHDAIDIEN)" alt="">
+                    </div>
+                    <p style="margin-bottom:0">@ViewBag.User.TENND</p>
+                </div>
+                <div class="pop-up-menu">
+                    <i class="fas fa-caret-down"></i>
+
+                    <div class="pop-up-submenu">
+                        <ul>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-user"></i> <span>Hồ sơ cá nhân</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTeam","Team",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-users"></i> <span>Quản lí đội bóng</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTournament","Tournament",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-futbol"></i><span>Quản lí giải đấu</span></a> </li>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md" style="margin-top:75px">
+        <div class="card card-profile text-center">
+            <img class="card-img-top" src="~/Assets/img/banner1.png" />
+            <div class="card-block">
+                <img class="card-img-profile" src="~/Assets/img/Group1098.png" />
+                <h4 class="card-title">
+                    @Model.TENGD.ToUpper()
+                </h4>
+
+            </div>
+        </div>
+        <!-- Tabs -->
+        <section id="tabs" style="margin-bottom:50px">
+            <div class="container">
+                <div class="row" style="display: block">
+                    <div class="col-xs-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                                   role="tab" aria-controls="nav-home" aria-selected="true">THÔNG TIN</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                                   role="tab" aria-controls="nav-profile" aria-selected="false">ĐỘI THAM GIA</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                   role="tab" aria-controls="nav-contact" aria-selected="false">LỊCH THI ĐẤU</a>
+                                <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about"
+                                   role="tab" aria-controls="nav-about" aria-selected="false">KẾT QUẢ</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent" style="padding:20px 30px !important;">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+
+
+                                <div class="row" style="padding: 0 8%;">
+                                    <div class="col-5">
+                                        <div class="col-12">
+                                            <div>
+                                                <div id="img-preview"><img src="@Url.Content(Model.ANHDAIDIEN)" /> </div>
+                                                <input type="file" id="choose-file" name="choose-file" accept="image/*" />
+                                                <label for="choose-file">Choose File</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="TournamentName">Tên giải đấu</label>
+                                                <input type="text" class="form-control" id="tournamentName"
+                                                       value="@Model.TENGD">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="time">Thời gian</label>
+                                                <input type="date" class="form-control" id="time"
+                                                       value="@dateFormat">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="address">Địa điểm</label>
+                                                <select class="custom-select" id="address">
+                                                    <option value="SVD001" @(Model.MASVD == "SVD001" ? "selected" : "")>Sân vận động 1</option>
+                                                    <option value="SVD002" @(Model.MASVD == "SVD002" ? "selected" : "")>Sân vận động 2</option>
+                                                    <option value="SVD003" @(Model.MASVD == "SVD003" ? "selected" : "")>Sân vận động 3</option>
+                                                    <option value="SVD004" @(Model.MASVD == "SVD004" ? "selected" : "")>Sân vận động 4</option>
+                                                    <option value="SVD005" @(Model.MASVD == "SVD005" ? "selected" : "")>Sân vận động 5</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="minAge">Độ tuổi tối thiểu</label>
+                                                <input type="number" class="form-control" id="minAge"
+                                                       value="@Model.TUOITOITHIEU">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="maxAge">Độ tuổi tối đa</label>
+                                                <input type="number" class="form-control" id="maxAge"
+                                                       value="@Model.TUOITOIDA">
+                                            </div>
+                                            @*<div class="form-group">
+                                                    <label for="amountOfTeam">Số đội tham dự</label>
+                                                    <input type="number" class="form-control" id="amountOfTeam"
+                                                           value="@Model.SOLUONGDOITG">
+                                                </div>*@
+
+                                            <div class="form-group">
+                                                <label for="amountOfTeam">Số đội tham dự</label>
+                                                <select class="custom-select" id="amountOfTeam">
+                                                    <option value="8" @(Model.SOLUONGDOITG == 8 ? "selected" : "")>8</option>
+                                                    <option value="10" @(Model.SOLUONGDOITG == 10 ? "selected" : "")>10</option>
+                                                    <option value="12" @(Model.SOLUONGDOITG == 12 ? "selected" : "")>12</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="amountOfMember">Số lượng thành viên tối đa</label>
+                                                <input type="number" class="form-control" id="amountOfMember"
+                                                       value="@Model.SLTVTOIDA">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="prize">Giải thưởng</label>
+                                                <div class="input-group">
+
+                                                    <input type="text" class="form-control" id="prize"
+                                                           value="@Model.GIAITHUONG" aria-label="prize"
+                                                           aria-describedby="addon-wrapping">
+
+                                                </div>
+                                            </div>
+                                            <button type="submit" onclick="UpdateTournament()" class="btn btn-primary float-right">
+                                                Cập
+                                                nhật
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                 aria-labelledby="nav-profile-tab">
+                                <div class="match-list">
+                                    @foreach (var item in ViewBag.Participant)
+                                    {
+                                        <div class="match-item">
+                                            <div style="flex:1">
+                                                <div class="team-img">
+                                                    <img src="@Url.Content(item.ANHDAIDIEN)" alt="">
+                                                </div>
+                                            </div>
+
+                                            <p class="team-name" style="margin:0;flex:2;">@item.TENDB</p>
+
+                                            <div class="member" style="flex:1">
+                                                <i class="fas fa-users"></i>
+                                                <span class="memberOfTeam"> @item.SOLUONGTV</span>
+                                            </div>
+                                            <div class="site" style="flex:3">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="site-start">@item.KHUVUC_HD</span>
+                                            </div>
+                                            <button class="view-detail">Xem chi tiết</button>
+                                        </div>
+
+                                    }
+                                </div>
+                            </div>
+
+
+
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                 aria-labelledby="nav-contact-tab">
+                                <div class="row" style="padding: 0 8%;">
+                                    <h6 class="notification">Chưa có lịch thi đấu nào</h6>
+
+                                </div>
+                                <div class="row" style="padding: 0 8%;">
+                                    <button id="addSchedule" class="btn btn-primary float-center" onclick="addSchedule()">
+                                        Tạo lịch thi
+                                        đấu
+                                    </button>
+
+                                </div>
+                                <div class="matchList">
+
+                                </div>
+                            </div>
+
+
+                            <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                Chưa có trận đấu nào diễn ra
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Column -->
+                </div>
+                <!-- End row -->
+            </div>
+        </section>
+    </div>
+    <script>
+        var pop_upBtn = document.querySelector(".pop-up-menu");
+        var pop_up = document.querySelector(".pop-up-submenu");
+        pop_upBtn.onclick = function () {
+            pop_up.classList.toggle("active");
+        }
+
+    </script>
+    <script>
+
+        //add team
+
+        function getImage(chooseFile, imgPreview) {
+            chooseFile.addEventListener("change", function () {
+                getImgData();
+                function getImgData() {
+                    const files = chooseFile.files[0];
+
+                    if (files) {
+                        const fileReader = new FileReader();
+                        fileReader.readAsDataURL(files);
+                        fileReader.addEventListener("load", function () {
+                            imgPreview.style.display = "block";
+                            imgPreview.innerHTML = '<img src="' + this.result + '" />';
+                        });
+                    }
+                }
+            });
+        }
+
+        const chooseFile = document.getElementById("choose-file");
+        const imgPreview = document.getElementById("img-preview");
+        getImage(chooseFile, imgPreview);
+
+
+
+        //var inform = document.querySelector(".inform");
+        function UpdateTournament() {
+            var uid = "@Model.MAGD.Trim()";
+            var tournamentName = document.querySelector("#tournamentName");
+            var time = document.querySelector("#time");
+            var address = document.querySelector("#address");
+            var minAge = document.querySelector("#minAge");
+            var maxAge = document.querySelector("#maxAge");
+            var amountOfTeam = document.querySelector("#amountOfTeam");
+            var amountOfMember = document.querySelector("#amountOfMember");
+            var prize = document.querySelector("#prize");
+
+            if (validateForm(tournamentName.value, time.value, address.value, minAge.value, maxAge.value, amountOfTeam.value, amountOfMember.value, prize.value) != false) {
+                var form = new FormData();
+                form.append("uid", uid);
+                form.append("tournamentName", tournamentName.value);
+                form.append("time", time.value);
+                form.append("address", address.value);
+                form.append("minAge", minAge.value);
+                form.append("maxAge", maxAge.value);
+                form.append("amountOfTeam", amountOfTeam.value);
+                form.append("amountOfMember", amountOfMember.value);
+                form.append("prize", prize.value);
+                form.append("avatar", chooseFile.files[0])
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://localhost:44309/Tournament/UpdateTournament', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var res = xhr.response;
+                        var resJson = JSON.parse(res);
+
+                        if (resJson.Data.status == "OK") {
+
+                            var pop_up_infor = document.querySelector(".pop-up-infor")
+                            pop_up_infor.classList.add("active");
+                            setTimeout(function () {
+                                pop_up_infor.classList.remove("active");
+                            }, 3000)
+
+
+                        }
+                        else {
+                            inform.innerText = "Không thể thêm được giải đấu vui lòng xem lại form đã điền!";
+                        }
+                    }
+                }
+                xhr.send(form);
+            }
+        }
+
+
+
+        function validateForm(tournamentName, time, address, minAge, maxAge, amountOfTeam, amountOfMember, prize) {
+            var isValid = true;
+
+            if (tournamentName == "" || time == "" || address == "" || minAge == "" || maxAge == "" || amountOfTeam == "" || amountOfMember == "" || prize == "") {
+                inform.innerText = "Vui lòng điền đầy đủ các thông tin ở các trường!";
+                isValid = false;
+            }
+            return isValid
+        }
+
+
+
+
+        // add schedule
+        function addSchedule() {
+            var form = new FormData();
+            var uid = "@Model.MAGD.Trim()";
+            form.append("uid", uid);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'https://localhost:44309/Tournament/AddSchedule', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var resJson = JSON.parse(xhr.response);
+                    if (resJson.Data.status == "OK") {
+                        var match_list = document.querySelector(".matchList");
+                        var matchList = resJson.Data.matchList;
+                        matchList.forEach(match => {
+                            var TENDB = "";
+                            var DOI_TENDB = "";
+                            var AD1 = "";
+                            var AD2 = "";
+                            for (var item of resJson.Data.teamList) {
+                                if (match.MADB == item.MADB) {
+                                    TENDB = item.TENDB;
+                                    AD1 = item.ANHDAIDIEN;
+                                }
+                                if (match.DOI_MADB == item.MADB) {
+                                    DOI_TENDB = item.TENDB;
+                                    AD2 = item.ANHDAIDIEN;
+                                }
+
+                            }
+
+                            var matchElement = document.createElement("div");
+                            matchElement.classList.add("match-item");
+                            matchElement.innerHTML = `
+                                        <div style ="flex:1"><div class="team-img">
+                                            <img src="${AD1.replace('~', '')}" alt="">
+                                        </div></div>
+
+                                        <p class="team-name" style="margin:0;flex:2;">${TENDB}</p>
+                                        <span  style ="flex:1">VS</span>
+                                        <div style ="flex:1"> <div class="team-img">
+                                            <img src="${AD2.replace('~', '')}" alt="">
+                                        </div></div>
+
+                                        <p class="team-name" style="margin:0;flex:2;">${DOI_TENDB}</p>
+                                        <div class="time"  style ="flex:2">
+                                            <i class="far fa-clock"></i>
+                                            <span class="time-start">5:00</span>
+                                            <span class="meridiem">PM</span>
+                                        </div>
+                                        <div class="date"  style ="flex:2">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span class="date-start">${String(match.THOIGIAN)}</span>
+                                        </div>
+                                        <div class="site"  style ="flex:2">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span class="site-start">Sân vận động</span>
+                                        </div> `
+                            match_list.appendChild(matchElement);
+                        })
+                    }
+                    else {
+                        alert("Chưa đủ số lượng thành viên để xếp lịch");
+                    }
+                }
+            }
+            xhr.send(form);
+        }
+    </script>
+    <script src="~/Assets/plugin/js/jquery-3.5.1.min.js"></script>
+    <script src="~/Assets/plugin/js/popper.min.js"></script>
+    <script src="~/Assets/plugin/js/bootstrap.min.js"></script>
+    @*<script src="~/Assets/js/ManageTournament.js"></script>*@
+</body>
+
+</html>

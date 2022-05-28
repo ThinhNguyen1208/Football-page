@@ -1,0 +1,757 @@
+﻿@model DB_QLGD1.DOIBONG
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/plugin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/ManageTournament.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        /* -------------------------menu ------------------------ */
+        .menu-container {
+            width: 100%;
+        }
+
+        .home-menu {
+            display: flex;
+            padding: 5px;
+            background-color: rgba(17,53,139,0.77);
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0px 0px 0px 45px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .home-menu-logo {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            color: #FFFCFC;
+            font-weight: 500;
+        }
+
+            .home-menu-logo img {
+                position: relative;
+                top: 3px;
+                width: 24%;
+            }
+
+        .home-menu-btn {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            margin-left: 350px;
+        }
+
+            .home-menu-btn li {
+                display: inline-block;
+            }
+
+                .home-menu-btn li a {
+                    color: #FFFCFC;
+                    text-decoration: none;
+                    display: block;
+                    padding: 15px;
+                    border-radius: 25px;
+                }
+
+
+                    .home-menu-btn li a:hover {
+                        background-color: #F29036;
+                        color: #050505;
+                    }
+
+        .home-menu-register {
+            display: flex;
+            width: 320px;
+            justify-content: space-around;
+            margin-right: 30px;
+            align-items: center;
+            color: #fff;
+        }
+
+            .home-menu-register .far {
+                font-size: 18px;
+                color: #fff;
+            }
+
+            .home-menu-register .avatar-name {
+                display: flex;
+                align-items: center;
+            }
+
+            .home-menu-register .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 15px;
+            }
+
+                .home-menu-register .avatar img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+
+            .home-menu-register .pop-up-menu {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #e2e4e9;
+                text-align: center;
+                line-height: 30px;
+                color: #050505;
+                font-size: 19px;
+                cursor: pointer;
+                position: relative;
+            }
+
+        .pop-up-submenu {
+            width: 300px;
+            position: absolute;
+            right: 25%;
+            top: 130%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #272626;
+            display: none;
+        }
+
+            .pop-up-submenu.active {
+                display: block;
+            }
+
+            .pop-up-submenu ul {
+                list-style: none;
+                text-align: left;
+            }
+
+                .pop-up-submenu ul li {
+                    padding: 10px 0;
+                }
+
+            .pop-up-submenu .fas {
+                margin-right: 10px;
+            }
+
+            .pop-up-submenu span {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+        .img-preview {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+            .img-preview img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+        [type="file"] {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+        }
+
+            [type="file"] + label {
+                font-family: sans-serif;
+                background: #f44336;
+                padding: 10px 30px;
+                border: 2px solid #f44336;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+                [type="file"] + label:hover {
+                    background-color: #fff;
+                    color: #f44336;
+                }
+
+
+        .pop-up-create {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+
+            .pop-up-create.active {
+                display: flex;
+            }
+
+        .form-createMember {
+            width: 800px;
+            display: flex;
+            background: #94DAFF;
+            padding: 20px 30px;
+            box-shadow: 0 0 15px #000;
+        }
+
+        .form-create-inputs {
+            padding: 0 20px;
+            flex: 1;
+        }
+
+            .form-create-inputs label {
+                font-weight: 500;
+                font-size: 17px;
+            }
+
+            .form-create-inputs input, select {
+                width: 100%;
+                height: 38px;
+                border: none;
+                outline: none;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+
+        #submit-create {
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px #010101;
+        }
+
+
+        .match-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 10px 0px;
+            color: rgba(0,0,0,0.8);
+            font-size: 20px;
+        }
+
+            .match-item .team-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+                .match-item .team-img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+        .view-detail {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            background: #44c044;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px #ccc;
+        }
+
+        .deleteMember {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            background: #FF7171;
+            border-radius: 5px;
+            margin-left: 10px;
+            color: #fff;    
+        }
+    </style>
+    <div class="pop-up-infor">
+        <i class="far fa-check-circle" style="color: #82c91e;margin-right: 10px; font-size: 22px;"></i> <span>Bạn đã cập nhật đội thành công</span>
+    </div>
+
+    <div class="pop-up-create">
+        <div class="form-createMember">
+            <div class="form-create-imgs">
+                <h1 style="font-size: 24px; margin-bottom:10px;">Chọn ảnh đại diện</h1>
+                <div class="form-create-img" style="width:300px; height:300px;">
+                    <div id="img-preview4" class="img-preview" style="width:100%;height:100%;overflow:hidden"></div>
+                    <input type="file" id="choose-file4" name="choose-file4" accept="image/*" />
+                    <label for="choose-file4"><i class="fas fa-camera" style="font-size:30px"></i></label>
+                </div>
+
+            </div>
+            <div class="form-create-inputs">
+
+                <label for="memberName">Tên cầu thủ:</label> <br>
+                <input type="text" id="memberName"> <br>
+
+                <label for="birthday">Ngày sinh:</label> <br>
+                <input type="date" id="birthday"> <br>
+
+                <label for="gender">Giới tính:</label> <br>
+                <select id="gender">
+                    <option> chọn giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select> <br />
+
+
+                <label for="position">Vị trí:</label> <br>
+                <select id="position">
+                    <option> chọn vị trí</option>
+                    <option value="Tiền đạo">Tiền đạo</option>
+                    <option value="Tiền vệ trung tâm">Tiền vệ trung tâm</option>
+                    <option value="Tiền vệ cánh">Tiền vệ cánh</option>
+                    <option value="Hậu vệ">Hậu vệ</option>
+                    <option value="Thủ môn">Thủ môn</option>
+                </select> <br />
+
+                <label for="numberShirt">Số áo:</label> <br>
+                <input type="number" id="numberShirt"> <br>
+
+                <p class="inform" style="font-size:20px;color:red;text-align:center"></p>
+                <button id="submit-create" onclick="addMember()">Thêm thành viên</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="menu-container" style="padding: 0;">
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <img src="~/Assets/img/pngwing 1.png" />
+                <h1 style="font-size: 32px; font-weight:bold">My Champion</h1>
+            </div>
+            <ul class="home-menu-btn" style="margin-bottom:0">
+                <li><a href="@Url.Action("IndexUser","Home",new {id = Session["user"] })">Trang chủ</a></li>
+                <li><a href="@Url.Action("Tournaments","Home")">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+            <div class="home-menu-register">
+                <div class="infors"><i class="far fa-bell"></i></div>
+                <div class="mail"><i class="far fa-envelope"></i></div>
+                <div class="avatar-name">
+                    <div class="avatar">
+                        <img src="@Url.Content(ViewBag.User.ANHDAIDIEN)" alt="">
+                    </div>
+                    <p style="margin-bottom:0">@ViewBag.User.TENND</p>
+                </div>
+                <div class="pop-up-menu">
+                    <i class="fas fa-caret-down"></i>
+
+                    <div class="pop-up-submenu">
+                        <ul>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-user"></i> <span>Hồ sơ cá nhân</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTeam","Team",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-users"></i> <span>Quản lí đội bóng</span></a> </li>
+                            <li> <a href="@Url.Action("ManageTournament","Tournament",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-futbol"></i><span>Quản lí giải đấu</span></a> </li>
+                            <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md">
+
+        <div class="card card-profile text-center">
+            <img class="card-img-top" src="~/Assets/img/vietnam-football-team.jpg" />
+            <div class="card-block">
+                <img class="card-img-profile" src="~/Assets/img/Group1098.png" />
+                <h4 class="card-title">
+                    @Model.TENDB
+                </h4>
+
+            </div>
+        </div>
+        <!-- Tabs -->
+        <section id="tabs" style="margin-bottom:50px">
+            <div class="container">
+                <div class="row" style="display: block">
+                    <div class="col-xs-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                                   role="tab" aria-controls="nav-home" aria-selected="true">THÔNG TIN</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                                   role="tab" aria-controls="nav-profile" aria-selected="false">THÀNH VIÊN</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                   role="tab" aria-controls="nav-contact" aria-selected="false">ĐỘI HÌNH</a>
+                                <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about"
+                                   role="tab" aria-controls="nav-about" aria-selected="false">THÀNH TÍCH</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+
+
+                                <div class="row" style="padding: 0 8%;">
+                                    <div class="col-5">
+                                        <div class="col-12">
+                                            <div>
+                                                <div class="img-preview" id="img-preview1"><img style="width:100%" src="@Url.Content(Model.ANHDAIDIEN)" /> </div>
+                                                <input type="file" id="choose-file1" name="choose-file1" accept="image/*" />
+                                                <label for="choose-file1">Choose File</label>
+                                            </div>
+                                            <br><br><br>
+
+                                            <div>
+                                                <div class="img-preview" id="img-preview2"><img style="width:100%" src="@Url.Content(Model.ANHDP1)" /> </div>
+                                                <input type="file" id="choose-file2" name="choose-file2" accept="image/*" />
+                                                <label for="choose-file2">Choose File</label>
+                                            </div>
+                                            <br><br><br>
+
+                                            <div>
+                                                <div class="img-preview" id="img-preview3"><img style="width:100%" src="@Url.Content(Model.ANHDP2)" /> </div>
+                                                <input type="file" id="choose-file3" name="choose-file3" accept="image/*" />
+                                                <label for="choose-file3">Choose File</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="TeamName">Tên đội bóng</label>
+                                                <input type="text" class="form-control" id="TeamName"
+                                                       name="TeamName" value="@Model.TENDB">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone">Số điện thoại liên hệ</label>
+                                                <input type="tel" class="form-control" id="phone" name="phone"
+                                                       pattern="0[0-9]{3}-[0-9]{2}-[0-9]{3}" value="@ViewBag.User.SDT">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email liên hệ</label>
+                                                <input type="email" class="form-control" id="email" name="email"
+                                                       value="@ViewBag.User.EMAIL">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="age">Độ tuổi tối thiểu</label>
+                                                <input type="number" class="form-control" id="age"
+                                                       value="@Model.DOTUOI">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="level">Trình độ</label>
+                                                <select class="custom-select" id="inputGroupSelect02">
+                                                    <option value="Gà mờ">Gà mờ</option>
+                                                    <option value="Nghiệp dư">Nghiệp dư</option>
+                                                    <option selected value="Chuyên nghiệp">Chuyên nghiệp</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="area">Khu vực hoạt động</label>
+                                                <input type="text" class="form-control" id="area" name="area"
+                                                       value="@Model.KHUVUC_HD">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="introduction">Giới thiệu</label>
+                                                <textarea rows="6" name="introduction" id="introduction"
+                                                          class="form-control">@Model.GIOITHIEU</textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary float-right" onclick="UpdateTeam()">
+                                                Cập
+                                                nhật
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                 aria-labelledby="nav-profile-tab">
+                                <div class="row" style="padding: 0 8%;">
+                                    <h6 class="notification">Thành viên đội bóng</h6>
+                                </div>
+                                <div class="row" style="padding: 0 8%;">
+                                    <button id="addMember" class="btn btn-primary float-center">
+                                        Thêm thành viên
+                                        đấu
+                                    </button>
+                                </div>
+                                <div class="member-list" style="padding: 20px">
+                                    @foreach(var item in ViewBag.Member)
+                                    {
+                                    <div class="match-item">
+                                        <div style="flex:1">
+                                            <div class="team-img">
+                                                <img src="@Url.Content(item.ANHTHE)" alt="">
+                                            </div>
+                                        </div>
+
+                                        <p class="team-name" style="margin:0;flex:2;">@item.TENTV</p>
+
+                                        <div class="member" style="flex:2">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span class="memberOfTeam">@item.NGAYSINH.ToString().Split(' ')[0]</span>
+                                        </div>
+                                        <div class="site" style="flex:2">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span class="site-start">@item.VITRI</span>
+                                        </div>
+                                        <button class="view-detail">Xem chi tiết</button>
+                                        <button class="deleteMember">Xóa</button>
+                                    </div>
+                                    }
+                                </div>
+                            </div>
+
+
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                 aria-labelledby="nav-contact-tab">
+                                
+                            </div>
+
+
+                            <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                Chưa tham gia trận đấu nào
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Column -->
+                </div>
+                <!-- End row -->
+            </div>
+        </section>
+    </div>
+    <script>
+        var pop_upBtn = document.querySelector(".pop-up-menu");
+        var pop_up = document.querySelector(".pop-up-submenu");
+        pop_upBtn.onclick = function () {
+            pop_up.classList.toggle("active");
+        }
+
+
+
+        var pop_up_create = document.querySelector(".pop-up-create");
+        var submit_create = document.querySelector("#addMember");
+        submit_create.onclick = function () {
+            pop_up_create.classList.add("active");
+
+            pop_up_create.onclick = function (event) {
+                if (event.target == pop_up_create) {
+                    pop_up_create.classList.remove("active");
+                }
+            }
+        }
+        function getImage(chooseFile, imgPreview) {
+            chooseFile.addEventListener("change", function () {
+                getImgData();
+                function getImgData() {
+                    const files = chooseFile.files[0];
+
+                    if (files) {
+                        const fileReader = new FileReader();
+                        fileReader.readAsDataURL(files);
+                        fileReader.addEventListener("load", function () {
+                            imgPreview.style.display = "block";
+
+                            imgPreview.innerHTML = '<img src="' + this.result + '" style="height:100%; object-fit:cover;" />';
+                        });
+                    }
+                }
+            });
+        }
+
+        const chooseFile1 = document.getElementById("choose-file1");
+        const imgPreview1 = document.getElementById("img-preview1");
+        getImage(chooseFile1, imgPreview1);
+
+        const chooseFile2 = document.getElementById("choose-file2");
+        const imgPreview2 = document.getElementById("img-preview2");
+        getImage(chooseFile2, imgPreview2);
+
+        const chooseFile3 = document.getElementById("choose-file3");
+        const imgPreview3 = document.getElementById("img-preview3");
+        getImage(chooseFile3, imgPreview3);
+
+
+        function UpdateTeam() {
+            var teamName = document.querySelector("#TeamName");
+            var age = document.querySelector("#age");
+            var area = document.querySelector("#area");
+            var introduction = document.querySelector("#introduction");
+
+
+
+            if (validateForm(teamName.value, age.value, area.value, introduction.value) != false) {
+                var form = new FormData();
+                form.append("uid",@Model.MADB.Trim())
+                form.append("teamName", teamName.value);
+                form.append("age", age.value);
+                form.append("area", area.value);
+                form.append("introduction", introduction.value);
+                form.append("avatar", chooseFile1.files[0]);
+                form.append("uniform1", chooseFile2.files[0]);
+                form.append("uniform2", chooseFile3.files[0]);
+
+                form.append("img1", chooseFile1.files[0] != null? "T" : "F");
+                form.append("img2", chooseFile2.files[0] != null? "T" : "F");
+                form.append("img3", chooseFile3.files[0] != null? "T" : "F");
+
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://localhost:44309/Team/UpdateTeam', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var res = xhr.response;
+                        var resJson = JSON.parse(res);
+
+                        if (resJson.Data.status == "OK") {
+
+                            var pop_up_infor = document.querySelector(".pop-up-infor")
+                            pop_up_infor.classList.add("active");
+                            setTimeout(function () {
+                                pop_up_infor.classList.remove("active");
+                            }, 3000)
+
+
+                        }
+                        else {
+                            inform.innerText = "Không thể thêm được đội bóng vui lòng xem lại form đã điền!";
+                        }
+                    }
+                }
+                xhr.send(form);
+            }
+        }
+
+
+
+        function validateForm(teamName, age, area, introduction) {
+            var isValid = true;
+
+            if (teamName == "" || age == "" || area == "" || introduction == "") {
+                inform.innerText = "Vui lòng điền đầy đủ các thông tin ở các trường!";
+                isValid = false;
+            }
+            return isValid
+        }
+
+
+        const chooseFile4 = document.getElementById("choose-file4");
+        const imgPreview4 = document.getElementById("img-preview4");
+        getImage(chooseFile4, imgPreview4);
+
+        function addMember() {
+
+            var memberName = document.querySelector("#memberName");
+            var birthday = document.querySelector("#birthday");
+            var gender = document.querySelector("#gender");
+            var position = document.querySelector("#position");
+            var numberShirt = document.querySelector("#numberShirt");
+            var inform = document.querySelector(".form-createMember").querySelector(".inform");
+            if (memberName.value == "" || birthday.value == "" || gender.value == "" || position.value == "" || numberShirt.value == "") {
+                inform.innerText = "Vui lòng nhập đầy đủ các thông tin trước khi gửi";
+            }
+            else {
+                var form = new FormData();
+                form.append("uid",@Model.MADB.Trim());
+                form.append("memberName", memberName.value);
+                form.append("birthday", birthday.value);
+                form.append("gender", gender.value);
+                form.append("position", position.value);
+                form.append("numberShirt", numberShirt.value);
+                form.append("avatar", chooseFile4.files[0]);
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://localhost:44309/Team/addMember', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var res = xhr.response;
+                        var resJson = JSON.parse(res);
+
+                        if (resJson.Data.status = "OK") {
+
+                            var date = birthday.value.split('-');
+                            var day = date[2];
+                            var month = date[1];
+                            var year = date[0];
+                            var member_list = document.querySelector(".member-list");
+                            var element = document.createElement("div");
+                            element.classList.add("match-item");
+                            element.innerHTML = `
+                                            <div style="flex:1">
+                                                <div class="team-img">
+                                                    <img src="${resJson.Data.imgSrc}" alt="">
+                                                </div>
+                                            </div>
+
+                                            <p class="team-name" style="margin:0;flex:2;">${memberName.value}</p>
+
+                                            <div class="member" style="flex:2">
+                                                   <i class="far fa-calendar-alt"></i>
+                                                <span class="memberOfTeam">${day}/${month}/${year}</span>
+                                            </div>
+                                            <div class="site" style="flex:2">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="site-start">${position.value}</span>
+                                            </div>
+                                            <button class="view-detail">Xem chi tiết</button>
+                                             <button class="deleteMember">Xóa</button>`
+                            member_list.appendChild(element);
+
+                            /*----------*/
+                            alert("Thêm cầu thủ thành công");
+                            memberName.value = "";
+                            gender.value = "";
+                            position.value = "";
+                            birthday.value = "";
+                            numberShirt.value = "";
+                            chooseFile4.value = "";
+                            imgPreview4.innerHTML = "<div></div>";
+                        }
+                    }
+                }
+                xhr.send(form);
+            }
+        }
+    </script>
+    <script src="~/Assets/plugin/js/jquery-3.5.1.min.js"></script>
+    <script src="~/Assets/plugin/js/popper.min.js"></script>
+    <script src="~/Assets/plugin/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+
+</head>
+<body>
+    
+    <div>
+       
+        <div class="home-container">
+            <div class="home-menu">
+                <div class="home-menu-logo">
+                    <img src="~/Assets/img/pngwing 1.png" />
+                    <h1>My Champion</h1>
+                </div>
+                <input class="home-menu-search" style="display:none" type="text" placeholder="Tìm giải đấu, đội bóng,...">
+                <ul class="home-menu-btn">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="@Url.Action("Tournaments")">Giải đấu</a></li>
+                    <li><a href="#">Đội thi đấu</a></li>
+                    <li><a href="#">Lịch thi đấu</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                </ul>
+                <div class="home-menu-register">
+
+                    @Html.ActionLink("Đăng nhập", "Login", "Register", null, new { @class = "btn-login" })
+                    @Html.ActionLink("Đăng ký", "NewCreate", "Register", null, new { @class = "btn-login" })
+                </div>
+            </div>
+            <div class="home-content">
+                <div class="home-content-logo">
+                    <img src="~/Assets/img/kisspng-football-player-american-football-sport-kick-sportsbook-5b2976693cc980 1.png" />
+                </div>
+                <div class="home-content-infors">
+                    <div class="home-content-infor">
+                        <div class="img-infor">
+                            <img src="~/Assets/img/kisspng-emoji1.png" />
+                            <span class="infor-football-tournament">1.122</span>
+                        </div>
+                        <span>GIẢI ĐẤU</span>
+                    </div>
+                    <div class="home-content-infor">
+                        <div class="img-infor">
+                            <img src="~/Assets/img/kisspng-emoji2.png" />
+                            <span class="infor-football-team">32.016</span>
+                        </div>
+                        <span>ĐỘI BÓNG</span>
+                    </div>
+                    <div class="home-content-infor" style="margin-top:-50px">
+                        <div class="img-infor">
+                            <img src="~/Assets/img/kisspng-emoji3.png" />
+                            <span class="infor-football-player"></span>
+                        </div>
+                        <span>CẦU THỦ</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

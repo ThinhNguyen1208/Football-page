@@ -1,0 +1,164 @@
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Project-NMCNPM.dll.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Project-NMCNPM.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Project-NMCNPM.pdb
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csc.exe
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csc.exe.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csc.rsp
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csi.exe
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csi.exe.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csi.rsp
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.Managed.Core.targets
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.AppContext.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Collections.Immutable.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Console.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Globalization.Calendars.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.Compression.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.FileSystem.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Net.Http.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Net.Sockets.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Reflection.Metadata.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.ValueTuple.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.XmlDocument.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.XPath.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\vbc.exe
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\vbc.exe.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\vbc.rsp
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\VBCSCompiler.exe
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\VBCSCompiler.exe.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DBIO.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DB_QLGD.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.SqlServer.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Microsoft.Web.Infrastructure.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Helpers.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Mvc.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Razor.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Deployment.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Razor.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DBIO.pdb
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DBIO.dll.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DB_QLGD.pdb
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DB_QLGD.dll.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.SqlServer.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Razor.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Deployment.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Razor.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Helpers.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Mvc.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.csprojAssemblyReference.cache
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.csproj.CoreCompileInputs.cache
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.csproj.CopyComplete
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Project-NMCNPM.dll.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Project-NMCNPM.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Project-NMCNPM.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csc.exe
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csc.exe.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csc.rsp
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csi.exe
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csi.exe.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\csi.rsp
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.Managed.Core.targets
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.AppContext.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Collections.Immutable.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Console.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Globalization.Calendars.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.Compression.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.FileSystem.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Net.Http.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Net.Sockets.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Reflection.Metadata.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.ValueTuple.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.XmlDocument.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.XPath.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\vbc.exe
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\vbc.exe.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\vbc.rsp
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\VBCSCompiler.exe
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\roslyn\VBCSCompiler.exe.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DBIO.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.SqlServer.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Microsoft.Web.Infrastructure.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Helpers.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Mvc.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Razor.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Deployment.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Razor.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DBIO.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DBIO.dll.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\EntityFramework.SqlServer.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Razor.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Deployment.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Webpages.Razor.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Helpers.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\System.Web.Mvc.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.csproj.AssemblyReference.cache
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.csproj.CoreCompileInputs.cache
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.csproj.CopyComplete
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\obj\Debug\Project-NMCNPM.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DB_QLGD1.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DB_QLGD1.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\Project-NMCNPM\bin\DB_QLGD1.dll.config

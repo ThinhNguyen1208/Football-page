@@ -1,0 +1,30 @@
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DBIO.dll.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DBIO.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DBIO.pdb
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DB_QLGD.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.SqlServer.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DB_QLGD.pdb
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DB_QLGD.dll.config
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.SqlServer.xml
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.csprojAssemblyReference.cache
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.csproj.CoreCompileInputs.cache
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.csproj.CopyComplete
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.dll
+D:\đại học\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DBIO.dll.config
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DBIO.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DBIO.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.SqlServer.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\EntityFramework.SqlServer.xml
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.csproj.AssemblyReference.cache
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.csproj.CoreCompileInputs.cache
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.csproj.CopyComplete
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\obj\Debug\DBIO.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DB_QLGD1.dll
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DB_QLGD1.pdb
+D:\University\hk1 năm 3\Nhập môn công nghệ phần mềm\Lập trình giao diện NMCNPM\Project-NMCNPM\DBIO\bin\Debug\DB_QLGD1.dll.config

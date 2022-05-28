@@ -1,0 +1,247 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ManageTournament</title>
+    <link href="~/Assets/plugin/css/all.css" rel="stylesheet" />
+    <link href="~/Assets/plugin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/Tournament.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+       .btn-login {
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            color: #FFFCFC;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 5px 15px;
+        }
+
+        .btn-login:first-child {
+                border-right: 1px solid #FFFCFC;
+        }
+
+
+    </style>
+    <div class="menu-container" style="padding: 0;">
+
+        <div class="home-menu">
+            <div class="home-menu-logo">
+                <img src="~/Assets/img/pngwing 1.png" />
+                <h1 style="font-size: 32px; font-weight:bold">My Champion</h1>
+            </div>
+            <ul class="home-menu-btn" style="margin-bottom:0">
+                @if (Session["user"] != null)
+                {
+                    <li><a href="@Url.Action("IndexUser","Home",new {id = Session["user"] })">Trang chủ</a></li>
+                }
+                else
+                {
+                    <li><a href="@Url.Action("Index")">Trang chủ</a></li>
+                }
+                <li><a href="#">Giải đấu</a></li>
+                <li><a href="#">Đội thi đấu</a></li>
+                <li><a href="#">Lịch thi đấu</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+            @if (Session["user"] != null)
+            {
+                <div class="home-menu-register">
+                    <div class="infors"><i class="far fa-bell"></i></div>
+                    <div class="mail"><i class="far fa-envelope"></i></div>
+                    <div class="avatar-name">
+                        <div class="avatar">
+                            <img src="@Url.Content(ViewBag.User.ANHDAIDIEN)" alt="">
+                        </div>
+                        <p style="margin-bottom:0">@ViewBag.User.TENND</p>
+                    </div>
+                    <div class="pop-up-menu">
+                        <i class="fas fa-caret-down"></i>
+
+                        <div class="pop-up-submenu">
+                            <ul>
+                                <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-user"></i> <span>Hồ sơ cá nhân</span></a> </li>
+                                <li> <a href="@Url.Action("ManageTeam","Team",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-users"></i> <span>Quản lí đội bóng</span></a> </li>
+                                <li> <a href="@Url.Action("ManageTournament","Tournament",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-futbol"></i><span>Quản lí giải đấu</span></a> </li>
+                                <li> <a href="@Url.Action("Logout","Register",null)" style="text-decoration:none; color:#000; display:block"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+            else 
+            {
+                <div >
+                    @Html.ActionLink("Đăng nhập", "Login", "Register", null, new { @class = "btn-login" })
+                    @Html.ActionLink("Đăng ký", "NewCreate", "Register", null, new { @class = "btn-login" })
+                </div>
+            }
+
+            
+        </div>
+        <img class="img-fluid" src="~/Assets/img/145.png" />
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-top:30px; color: red;">
+            <div class="col text-center"><h1>DANH SÁCH CÁC GIẢI ĐẤU</h1></div>
+
+        </div>
+        <div class="row head-title">
+            <div class="col">CHƯA DIỄN RA</div>
+
+        </div>
+        <div class="row list">
+            @foreach (DB_QLGD1.GIAIDAU item in Model)
+            {
+                if (item.TRANGTHAI == 0)
+                {
+
+                    <div class="col" style="flex-grow:0">
+                        <div class="card card-profile text-center">
+                            <img class="card-img-top" src="~/Assets/img/wp.jpg" />
+                            <div class="card-block">
+                                <div class="card-img-profile">
+                                    <img src="@Url.Content(item.ANHDAIDIEN)" />
+                                </div>
+
+                                <h4 class="card-title">
+                                    @item.TENGD
+                                    <small>Giải đấu chuyên nghiệp</small>
+                                </h4>
+                                <h5>Số đội tham dự: @item.SOLUONGDOITG</h5>
+                                <h6>Thời gian bắt đầu: @item.TGBATDAU</h6>
+                            </div>
+                            <div class="card-footer " style="padding: 0;">
+                                <a href="@Url.Action("InforTournament", "Tournament", new { id = item.MAGD.Trim()})" class="btn btn-danger btn-lg  btn-block" role="button"
+                                   style="border-radius: 0 0 1vw 1vw;" aria-pressed="true">CHI TIẾT</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+        </div>
+
+        <br>
+
+        <div class="row head-title">
+            <div class="col">ĐANG DIỄN RA</div>
+
+        </div>
+        <div class="row list">
+
+            @foreach (var item in Model)
+            {
+                if (item.TRANGTHAI == 1)
+                {
+
+                    <div class="col" style="flex-grow:0">
+                        <div class="card card-profile text-center">
+                            <img class="card-img-top" src="~/Assets/img/wp.jpg" />
+                            <div class="card-block">
+                                <div class="card-img-profile"><img src="@Url.Content(item.ANHDAIDIEN)" /></div>
+
+                                <h4 class="card-title">
+                                    @item.TENGD
+                                    <small>Giải đấu chuyên nghiệp</small>
+                                </h4>
+                                <h5>Số đội tham dự: @item.SOLUONGDOITG</h5>
+                                <h6>Thời gian bắt đầu: @item.TGBATDAU</h6>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row" style="padding: 0;">
+                                    <div class="col-4" style="padding: 0;">
+                                        <button type="button" class="btn btn-danger btn-block"
+                                                style="border-radius: 0 0 0vw 1vw; padding: 10px 0;">
+                                            XOÁ
+                                        </button>
+                                    </div>
+                                    <div class="col-8" style="padding: 0;">
+                                        <a href="#" class="btn btn-primary btn-block" role="button"
+                                           style="border-radius: 0 0 1vw 0vw; padding: 10px 0;" aria-pressed="true">CHỈNH SỬA</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+        <br>
+        <div class="row head-title">
+            <div class="col">ĐÃ DIỄN RA</div>
+
+        </div>
+        <div class="row list">
+
+            @foreach (var item in Model)
+            {
+                if (item.TRANGTHAI == 2)
+                {
+
+                    <div class="col" style="flex-grow:0">
+                        <div class="card card-profile text-center">
+                            <img class="card-img-top" src="~/Assets/img/wp.jpg" />
+                            <div class="card-block">
+                                <div class="card-img-profile"><img src="@Url.Content(item.ANHDAIDIEN)" /></div>
+
+                                <h4 class="card-title">
+                                    @item.TENGD
+                                    <small>Giải đấu chuyên nghiệp</small>
+                                </h4>
+                                <h5>Số đội tham dự: @item.SOLUONGDOITG</h5>
+                                <h6>Thời gian bắt đầu: @item.TGBATDAU</h6>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row" style="padding: 0;">
+                                    <div class="col-4" style="padding: 0;">
+                                        <button type="button" class="btn btn-danger btn-block"
+                                                style="border-radius: 0 0 0vw 1vw; padding: 10px 0;">
+                                            XOÁ
+                                        </button>
+                                    </div>
+                                    <div class="col-8" style="padding: 0;">
+                                        <a href="#" class="btn btn-primary btn-block" role="button"
+                                           style="border-radius: 0 0 1vw 0vw; padding: 10px 0;" aria-pressed="true">CHỈNH SỬA</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+        <br>
+    </div>
+    <script>
+
+
+    var pop_upBtn = document.querySelector(".pop-up-menu");
+    var pop_up = document.querySelector(".pop-up-submenu");
+    pop_upBtn.onclick = function () {
+    pop_up.classList.toggle("active");
+    }
+    </script>
+
+    @*<script src="~/Assets/plugin/js/jquery-3.5.1.min.js"></script>
+        <script src="~/Assets/plugin/js/popper.min.js"></script>
+        <script src="~/Assets/plugin/js/bootstrap.min.js"></script>*@
+</body>
+</html>
+

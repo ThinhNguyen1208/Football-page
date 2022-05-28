@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* -------------------------menu ------------------------ */
+.home-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/home_bg.png');
+    background-position: center;
+    background-size: cover;
+}
+.home-menu{
+    display: flex;
+    padding: 5px;
+    background-color:rgba(17,53,139,0.77);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 0px 45px;
+    position: relative;
+    
+}
+.home-menu-logo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: #FFFCFC;
+    font-weight: 500;
+}
+.home-menu-logo img{
+    position: relative;
+    top: 3px;
+    width:24%;
+}
+
+.home-menu-logo h1{
+    font-size:28px;
+}
+
+.home-menu-search {
+    width: 359px;
+    height: 49px;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #525151;
+    border: none;
+    outline: none;
+    margin-left: 400px;
+
+}
+.home-menu-btn{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 23px;
+margin-left:350px;
+}
+.home-menu-btn li{
+    display: inline-block;
+    
+}
+
+.home-menu-btn li a{
+    color: #FFFCFC;
+    text-decoration: none;
+    display:  block ;
+    padding: 15px;
+    border-radius: 25px;
+    
+}
+
+
+.home-menu-btn li a:hover{
+    background-color: #F29036;
+    color: #050505;
+}
+.home-menu-register .btn-login{
+    display: inline-block;
+    text-decoration:none;
+    background-color: transparent;
+    color: #FFFCFC;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 5px 15px;
+}
+
+.home-menu-register .btn-login:first-child{
+    border-right: 1px solid #FFFCFC;
+}
+
+
+/* -------------------------content ------------------------ */
+
+.home-content{
+    display: flex;
+    height: 92%;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+}
+
+.home-content-logo{
+    width: 39%;
+}
+
+.home-content-logo img{
+    width: 100%;
+    animation: move1 1s ease-in ;
+}
+
+@keyframes move1{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0)
+    }
+}
+
+@keyframes move2{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.home-content-infors{
+    width: 50%;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: fade 1.5s ease-in;
+    flex-wrap:wrap;
+}
+
+.home-content-infor{
+    text-align: center;
+    width: 50%;
+}
+
+
+
+.home-content-infor>span{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    width: 170px;
+    padding:5px 0;
+    background-color: #FFFCFC;
+    border-radius: 20px;
+}
+
+.home-content-infor:nth-child(2)>span{
+    position: relative;
+    top: -30px;
+}
+
+.home-content-infor .img-infor{
+    position: relative;
+    width: 100%;
+}
+
+.home-content-infor .img-infor span{
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.home-content-infor:nth-child(2) .img-infor span{
+    bottom: 18%;
+}
+.home-content-feature{
+    /* width: 639px; */
+    width: 33.36%;   
+    height: 100%;
+    background-image: url('../img/BG.png');    
+    background-size: contain;
+    position: relative;
+    animation: move2 1s ease-in;
+}
+
+.home-content-feature button {
+    position: absolute;
+    width: 300px;
+    height: 95px;
+    border: none;
+    outline:none;
+    font-size: 36px;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    transition: 0.3s;
+}
+
+
+
+.home-content-feature button:nth-child(1){    
+    top: 15%;
+    background: #9AA70C;
+}
+.home-content-feature button:nth-child(2){    
+    top: 28%;
+    background: #9AA70C;
+
+}
+.home-content-feature button:nth-child(3){    
+    top:62%;
+    background: #A7690C;
+
+}
+.home-content-feature button:nth-child(4){    
+    top:75%;
+    background: #A7690C;
+
+}
+
+
+
+
+
+
+
